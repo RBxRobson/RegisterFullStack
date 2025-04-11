@@ -1,14 +1,14 @@
 from fastapi import FastAPI
-from database import engine
-from models import Base 
-from routes import auth
 from fastapi.middleware.cors import CORSMiddleware
+from app.database import engine
+from app.models import Base 
+from app.routes import auth
 
 app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5174"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
