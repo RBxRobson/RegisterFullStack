@@ -5,7 +5,7 @@ import { LoginPayload, TokenResponse, UserRegisterPayload, UserResponse } from '
 export const api = createApi({
   reducerPath: 'api',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:8000',
+    baseUrl: 'https://registerfullstack.onrender.com/',
   }),
   endpoints: (builder) => ({
     registerUser: builder.mutation<UserResponse, UserRegisterPayload>({
